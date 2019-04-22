@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Memo
+% LaTeX Template
+% Version 1.0 (30/12/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rob Oakes (http://www.oak-tree.us) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper,11pt]{texMemo} % Set the paper size (letterpaper, a4paper, etc) and font size (10pt, 11pt or 12pt)
+
+\usepackage{parskip} % Adds spacing between paragraphs
+\usepackage[colorlinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\hypersetup{citecolor=DeepPink4}
+\hypersetup{linkcolor=red}
+\hypersetup{urlcolor=blue}
+\usepackage{cleveref}
+\setlength{\parindent}{15pt} % Indent paragraphs
+
+%----------------------------------------------------------------------------------------
+%	MEMO INFORMATION
+%----------------------------------------------------------------------------------------
+
+\memoto{Dr.Shankarachary Ragi} % Recipient(s)
+
+\memofrom{Benjamin LeBrun} % Sender(s)
+
+\memosubject{Lab Assignment 3: Cyber Exploration Laboratory} % Memo subject
+
+\memodate{\today} % Date, set to \today for automatically printing todays date
+
+\logo{\includegraphics[width=0.1\textwidth]{logo.png}} % Institution logo at the top right of the memo, comment out this line for no logo
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the memo header information
+
+%----------------------------------------------------------------------------------------
+%	MEMO CONTENT
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction}
+In this lab we were asked to verify a number of systems under different input effects: waveform input, 
+loop gain, and system type upon steady state errors. This was accomplished using the in class lecture material 
+in combination with MATLAB's control systems toolbox.
+
+\section*{Prelab}
+\subsection*{Questions}
+\begin{enumerate}
+    \item What system types will yeld zero steady-state error for step inputs?
+    \item What system types will yield zero steady-state error for ramp inputs?
+    \item What system types will yield infinite steady-state error for ramp inputs?
+    \item What system types will yield zero steady-state error for parabolic inputs?
+    \item What system types will yield infinite steady-state error for parabolic inputs?
+    \item For the negative feedback system of Figure P7.35, where $G(s)= \frac{K(s+6)}{(s+4)(s+7)(s+9)(s+12)}$ and $H(s)=1$, calculate the steady-state error in terms of K for the following inputs: $5u(t)$,$5tu(t)$, and $5t^{2}u(t)$.
+    \item Repeat prelab 6 for $G(s)=\frac{K(s+6)(s+8)}{s(s+4)(s+7)(s+9)(s+12)}$and $H(s)=1$.
+    \item Repeat prelab 6 for $G(s)=\frac{K(s+6)(s+8)}{s^{2}(s+4)(s+7)(s+9)(s+12)}$and $H(s)=1$.
+\end{enumerate}
+
+\section*{Lab}
+\begin{enumerate}
+    \item Using Simulink, set up the negative feedback system of Prelab 6. Plot on one graph the error signal of the system for an input of $5u(t)$, and $K=50,500,1000$, and $5000$, repeat for inputs of $5t u(t)$ and $5t^{2}u(t)$.
+    \item Using Simulink, set up the negative feedback system of Prelab 7. Plot on one graph the error signal of the system for an input of $5u(t)$, and $K=50,500,1000$, and $5000$, repeat for inputs of $5t u(t)$ and $5t^{2}u(t)$.
+    \item Using Simulink, set up the negative feedback system of Prelab 8. Plot on one graph the error signal of the system for an input of $5u(t)$, and $K=200,400,800$, and $1000$, repeat for inputs of $5t u(t)$ and $5t^{2}u(t)$.
+\end{enumerate}
+%
+%\begin{figure}[H]
+%\begin{center}
+%\includegraphics[width = 0.5\textwidth]{spare_me.jpg}
+%\end{center}
+%\caption{Don't forget to include images and pictures of your setup.}
+%\label{fig:f4}
+%\end{figure}
+
+\section*{Postlab}
+\begin{enumerate}
+    \item Use your plots from Lab 1 and compare the expected steady-state errors to those calculated in the Prelab. Explain the reasons for any discrepancies.
+    \item Use your plots from Lab 2 and compare the expected steady-state errors to those calculated in the Prelab. Explain the reasons for any discrepancies.
+    \item Use your plots from Lab 3 and compare the expected steady-state errors to those calculated in the Prelab. Explain the reasons for any discrepancies.
+\end{enumerate}
+
+\section*{Appendices}
+You'll want to put your full code here, possibly datasheets. Each appendix should start on a fresh page. Check out the \textbf{lstlisting} package, it might make your life easier. 
+\newpage
+
+\section*{Appendix A: Nothing}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
+\grid
